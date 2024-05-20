@@ -52,8 +52,8 @@ include 'koneksi.php';
                     // Menampilkan Data
                     echo "<tr>";
                     echo "<td>$data[idDosen]</td>";
-                    echo "<td>$data[namaDosen]</td>";
-                    echo "<td>$data[noHP]</td>";
+                    echo "<td>" . htmlentities($data['namaDosen']). "</td>";
+                    echo "<td>" . htmlentities($data['noHP']). "</td>";
                     // Memubuat link untuk mengedit dan menghapus data
                     echo '<td>
                     <a href="editdosen.php?idDosen='. $data['idDosen'] .'">Edit</a> / 
